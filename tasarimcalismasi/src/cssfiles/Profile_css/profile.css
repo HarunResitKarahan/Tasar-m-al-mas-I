@@ -1,0 +1,92 @@
+.profileview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: flex-start;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+}
+.profile .profileimage {
+    border: 2px solid white;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.493);
+}
+.profileview .profilecontent {
+    display: block;
+    width: 66%;
+    height: 100%;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    justify-content: left;
+    color: wheat;
+    border: 1px solid wheat;
+}
+.profileview .profileinfo {
+    text-align: left;
+    list-style-type: none;
+    padding: 30px;
+    background: rgba(5, 5, 5, 0.329);
+    box-shadow: 0 -8px 16px 0 rgba(0, 0, 0, 0.493), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
+    border: 2px solid wheat;
+}
+.profileview .profileinfo li {
+    display: flex;
+    align-items: center;
+}
+.profileview .profileinfo ul {
+    display: inline-block;
+    padding: 0;
+    height: 100%;
+}
+.profileview .profilesolvedtests {
+    padding: 15px;
+    border: 1px solid wheat;
+    height: 750px;
+    background: rgba(5, 5, 5, 0.329);
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.493), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
+}
+.profileview li.favoritetests {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    padding-left: 45px;
+    width: 100%;
+}
+.profileview ul.favorite {
+    display: inline-block;
+    list-style-type: none;
+    margin: 2px;
+    text-align: left;
+    padding: 0px;
+    margin-right: 25px;
+    background: rgba(255, 255, 255, 0.295);
+    border: 2px solid rgba(255, 255, 255, 0.349);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.11), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+.profileview ul.favorite:hover {
+    transform: scale(1.07);
+}
+.profileview ul.favorite h5 {
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.452);
+    text-align: center;
+    background: #2ab1ff7c;
+    border-radius: 12px 12px  0 0;
+}
+.profileview ul.favorite li {
+    padding: 6px;
+}

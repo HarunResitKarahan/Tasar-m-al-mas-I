@@ -1,0 +1,16 @@
+.bigscreen {
+    padding: 0;
+    margin: 0;
+}
+.bigscreen .bv-example-row {
+    justify-content: center;
+    padding: 9.7% 28% 9.7% 28%;
+}
+.bigscreen .bv-example-row .bigtext{
+    cursor: default;
+    font-size: 42px;
+}
+.bigscreen .bv-example-row .minitext{
+    cursor: default;
+    font-size: 15px;
+}

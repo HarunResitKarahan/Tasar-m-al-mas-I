@@ -1,0 +1,70 @@
+/* Modal Content */
+.navbar .register .modal  .modal-content {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: flex-end;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+}
+  
+/* The Close Button */
+.navbar .register .modal .modal-content .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.navbar .register .modal .modal-content .close:hover,
+.navbar .register .modal .modal-content  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navbar .register .modal .modal-content .sign-in-person {
+    margin: auto;
+    width: 80%;
+    height: 150px;
+}
+.navbar .register .modal .modal-content p {
+    text-align: left;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 70%;
+    cursor: default;
+}
+.navbar .register .modal .modal-content .input {
+    width: 67%;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 0px;
+    padding: 5px;
+    border-radius: 3px;
+}
+.navbar .register .modal .modal-content .input:last-child {
+    margin-bottom: 15%;
+}
+.navbar .register .modal .modal-content .button {
+    width: 27%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 0px;
+    border-radius: 15px;
+}
+.navbar .register .modal .modal-content .button:hover {
+    background: rgba(78, 78, 78, 0.733);
+    color: white;
+}
+.navbar .register .modal .modal-content a {
+    width: 80%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.514);
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 8px;
+}
