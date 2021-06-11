@@ -1,0 +1,327 @@
+.categorynavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    margin-left: 1%;
+}
+.categorynavbar li {
+    margin: 0;
+}
+.categorynavbar ul {
+    margin: 0;
+    padding: 5px;
+}
+.categorynavbar a {
+    color: white;
+}
+.categorynavbar .person {
+    color: white;
+    text-decoration: none;
+    padding: 4px 0;
+    width: 48px;
+    height: 36px;
+}
+.categorynavbar .chevron-down {width: 12px; height: 12px; position: absolute; color: white; right: 0%; top: 32%;}
+.categorynavbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown:hover .dropdown-content {display: block;}
+.categorynavbar .dropdown-content {
+    display: none;
+    position: absolute;
+    left: -53%;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+.categorynavbar .dropdown-content a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 12px 16px;
+    display: block;
+}
+.categorynavbar .dropdown-content a:hover{
+    background: #6c757d;
+    color: black;
+}
+.categorynavbar .btn-secondary {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+}
+.categorynavbar .dropdown:hover {
+    background-color: #6c757d;
+}
+
+.categorynavbar .btn-secondary:hover {
+    background-color: #6c757d;
+}
+.categorynavbar .signin .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+.categorynavbar .signin .open {
+    display: block;
+}
+/* Modal Content */
+.categorynavbar .signin .modal  .modal-content {
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: flex-end;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+}
+.categorynavbar .signin .modal  .TurkceCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid5.jpg");
+}
+.categorynavbar .signin .modal  .MatematikCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid.jpg");
+}
+.categorynavbar .signin .modal  .FenCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid5.png");
+}
+.categorynavbar .signin .modal  .YabanciDilCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid7.jpg");
+}
+.categorynavbar .signin .modal  .SosyalBilimlerCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid1.jpg");
+}
+  
+/* The Close Button */
+.categorynavbar .signin .modal .modal-content .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.categorynavbar .signin .modal .modal-content .close:hover,
+.categorynavbar .signin .modal .modal-content  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.categorynavbar .register .modal .modal-content .girisekrani:hover {
+    text-decoration: underline;
+}
+.categorynavbar .signin .modal .modal-content .sign-in-person {
+    margin: auto;
+    width: 80%;
+    height: 150px;
+}
+.categorynavbar .signin .modal .modal-content p {
+    text-align: left;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 70%;
+    cursor: default;
+}
+.categorynavbar .signin .modal .modal-content .input {
+    width: 67%;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 0px;
+    padding: 5px;
+    border-radius: 3px;
+}
+.categorynavbar .signin .modal .modal-content .issignin {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.categorynavbar .register .modal .modal-content .isregistered {
+    width: 53%;
+    text-align: center;
+    margin: auto;
+}
+.categorynavbar .register .modal .modal-content .success {
+    color: rgb(0, 240, 0);
+    font-weight: bold;
+}
+.categorynavbar .register .modal .modal-content .failed {
+    color: rgb(255, 59, 59);
+    font-weight: bold;
+}
+.categorynavbar .signin .modal .modal-content .success {
+    color: rgb(0, 240, 0);
+    font-weight: bold;
+}
+.categorynavbar .signin .modal .modal-content .failed {
+    color: rgb(255, 59, 59);
+    font-weight: bold;
+}
+.categorynavbar .signin .modal .modal-content .input:last-child {
+    margin-bottom: 15%;
+}
+.categorynavbar .signin .modal .modal-content .button {
+    width: 27%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 0px;
+    border-radius: 15px;
+}
+.categorynavbar .signin .modal .modal-content .button:hover {
+    background: rgba(78, 78, 78, 0.733);
+    color: white;
+}
+.categorynavbar .signin .modal .modal-content a {
+    width: 80%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.514);
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 8px;
+}
+/* .categorynavbar .signin .modal .modal-content .input:focus {
+} */
+/* REGİSTER */
+.categorynavbar .register .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+.categorynavbar .register .open {
+    display: block;
+}
+.categorynavbar .register .modal  .modal-content {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: flex-end;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+}
+.categorynavbar .register .modal .modal-content .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.categorynavbar .register .modal .modal-content .close:hover,
+.categorynavbar .register .modal .modal-content  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.categorynavbar .register .modal .modal-content .sign-in-person {
+    margin: auto;
+    width: 80%;
+    height: 150px;
+}
+.categorynavbar .register .modal .modal-content p {
+    text-align: left;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 70%;
+    cursor: default;
+}
+.categorynavbar .register .modal .modal-content .input {
+    width: 67%;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 0px;
+    padding: 5px;
+    border-radius: 3px;
+}
+.categorynavbar .register .modal .modal-content .input:last-child {
+    margin-bottom: 15%;
+}
+.categorynavbar .register .modal .modal-content .button {
+    width: 27%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 0px;
+    border-radius: 15px;
+}
+.categorynavbar .register .modal .modal-content .button:hover {
+    background: rgba(78, 78, 78, 0.733);
+    color: white;
+}
+.categorynavbar .register .modal .modal-content a {
+    width: 80%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.514);
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 8px;
+}
+.categorynavbar .register .modal  .TurkceCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid5.jpg");
+}
+.categorynavbar .register .modal  .MatematikCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid.jpg");
+}
+.categorynavbar .register .modal  .FenCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid5.png");
+}
+.categorynavbar .register .modal  .YabanciDilCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid7.jpg");
+}
+.categorynavbar .register .modal  .TarihCategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid1.jpg");
+}
+
+@media screen and (max-width: 1541px) {
+    .categorynavbar .signin .modal .modal-content p {
+        font-size: 15px;
+    }
+    .categorynavbar .signin .modal .modal-content .button {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1401px) {
+    .categorynavbar .signin .modal .modal-content .button {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 1279px) {
+    .categorynavbar .signin .modal .modal-content .button {
+        width: 35%;
+    }
+}
+@media screen and (max-width: 1123px) {
+    .categorynavbar .signin .modal .modal-content .button {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 1006px) {
+    .categorynavbar .signin .modal .modal-content .button {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 914px) {
+    .categorynavbar .signin .modal .modal-content p {
+        font-size: 13px;
+    }
+    .categorynavbar .signin .modal .modal-content .button {
+        font-size: 12px;
+    }
+}

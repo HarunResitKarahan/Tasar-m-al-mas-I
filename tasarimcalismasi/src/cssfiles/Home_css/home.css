@@ -1,9 +1,7 @@
 
 .home {
-    color: wheat;
+    color: white;
 }
 .home .bckgrndimage{
-    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #1d2e3b;
 }

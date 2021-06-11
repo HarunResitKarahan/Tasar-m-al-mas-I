@@ -1,8 +1,6 @@
 /* Modal Content */
 .navbar .register .modal  .modal-content {
-    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #1d2e3b;
     align-items: flex-end;
     color: white;
     margin: auto;

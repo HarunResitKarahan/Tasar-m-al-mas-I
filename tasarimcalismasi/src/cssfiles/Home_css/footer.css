@@ -1,9 +1,9 @@
 .footer {
-    background: rgba(128, 128, 128, 0.418);
+    background: rgba(128, 128, 128, 0);
     justify-content: left;
     list-style: none;
     padding: 0.7%;
-    color: rgba(36, 36, 104, 0.596);
+    color: rgb(36, 36, 104);
 }
 .footer li {
     display: flex;

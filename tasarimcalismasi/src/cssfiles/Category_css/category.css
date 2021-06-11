@@ -1,0 +1,25 @@
+.category {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.matematikcategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fencategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.turkcecategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.yabancidilcategory {
+    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

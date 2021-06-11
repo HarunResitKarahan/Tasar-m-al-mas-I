@@ -3,84 +3,29 @@
     <!-- Navbar'da gösterilmek için katagori başlıkları oluşturuldu -->
       <li>
         <ul id="header1" class="header">
-          <a href="">TestCoz.com</a>
-          <ul class="miniheader ml-5">
-            <a href="">Spor</a>
-          </ul>
-          <ul class="miniheader">
-            <a href="">Coğrafya</a>
-          </ul>
-          <ul class="miniheader">
-            <a href="">Tarih</a>
-          </ul>
-          <ul class="miniheader">
-            <a href="">Türkçe</a>
-          </ul>
+          <a href=""><img src="../assets/TestCoz.png" width="200px" height="100%"></a>
         </ul>
-        <ul class="search mt-2" align="right">
-          <b-nav-form>
-            <!-- Arama Yeri oluşturuldu -->
-            <b-form-input class="mr-sm-2" placeholder="Search.."></b-form-input>
-            <b-button type="submit" style="padding: 5px 13px;"><b-icon-search/></b-button>
-            <a href="#" class="dropdown">
-              <!-- Profile ulaşmak için profile butonu oluşturuldu -->
-              <b-icon-person-fill @click="btn" class="person"/>
-              <b-icon-caret-down-fill class="chevron-down"/>
-              <div class="dropdown-content" align="left">
-                <router-link to="/profile">Profile</router-link>
-                <a href="">Çıkış</a>
-              </div>
-            </a>
-          </b-nav-form>
-          <div class="signin">
-            <div id="myModal" class="modal" :class="number === 1 ? 'open' : ''">
-                <div class="modal-content">
-                  <span @click="span" class="close">&times;</span>
-                    <b-icon-person-fill class="sign-in-person"/>
-                    <p>Kullanıcı Adı:</p>
-                    <input v-model="username" class="input" placeholder="Kullanıcı Adı">
-                    <p>Şifre:</p>
-                    <input v-model="password" class="input" placeholder="Şifre">
-                    <button @click="signinbutton(username,password)" class="button">Oturum Aç</button>
-                    <a @click="register" href="#">Üye değil misiniz ? Üye olun</a>
-                </div>
-            </div>
-          </div>
-          <div class="register">
-            <div id="myModal" class="modal" :class="number === 2 ? 'open' : ''">
-                <div class="modal-content">
-                  <span @click="span" class="close">&times;</span>
-                    <b-icon-person-fill class="sign-in-person"/>
-                    <p>Kullanıcı Adı</p>
-                    <input v-model="nick" class="input">
-                    <p>Ad</p>
-                    <input v-model="name" class="input">
-                    <p>Soyad</p>
-                    <input v-model="surname" class="input">
-                    <p>E-posta:</p>
-                    <input v-model="email" class="input">
-                    <p>Şifre:</p>
-                    <input v-model="registerpassword" class="input" type="password">
-                    <button @click="registerbutton(nick, name, surname, email, registerpassword)" class="button">Üye Ol</button>
-                    <a href="#" @click="signin">Üye misiniz ? Oturum Açınız</a>
-                </div>
-            </div>
-          </div>
-        </ul>
+          <Signin />
       </li>
   </div>
 </template>
 
 <script>
+import Signin from './Navbar/signin/Signin.vue'
 export default {
   name: 'Navbar',
+  components: {
+    Signin
+  },
   props: {
+    shuffle: Array,
+    suggestion: Array
   },
   data () {
     return {
       number: '',
-      nickname: '',
-      password: ''
+      issignin: '',
+      isregistered: ''
     }
   },
   methods: {
@@ -89,16 +34,38 @@ export default {
     },
     span () {
       this.number = 0
+      this.password = ''
+      this.nick = ''
+      this.name = ''
+      this.surname = ''
+      this.email = ''
+      this.registerpassword = ''
+      this.isregistered = ''
     },
     signin () {
       this.number = 1
+      this.nick = ''
+      this.name = ''
+      this.surname = ''
+      this.email = ''
+      this.registerpassword = ''
     },
     register () {
       this.number = 2
+      this.username = ''
+      this.password = ''
     },
     signinbutton (nick, password) {
-      this.nickname = nick
-      this.password = password
+      fetch('http://localhost:8081/signin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nickname: nick,
+          userpassword: password
+        })
+      })
+        .then(response => response.json())
+        .then(data => { this.issignin = data })
     },
     registerbutton (nick, name, surname, email, registerpassword) {
       fetch('http://localhost:8081/register', {
@@ -113,7 +80,11 @@ export default {
         })
       })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => { this.isregistered = data })
+    },
+    signout () {
+      localStorage.password = this.password
+      console.log('now pretend I did more stuff...')
     }
   }
 }

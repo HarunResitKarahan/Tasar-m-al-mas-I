@@ -2,60 +2,69 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #6096ba;
     padding: 10%;
 }
+.quiz .testheader {
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    background: #de574ebf;
+    display: flex;
+    justify-content: space-between;
+}
 .quiz .questions {
-    color: white;
-    background: #8080805d;
+    color: black;
+    background: white;
     position: relative;
     cursor: default;
-    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.11), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0.5px 3px 0.5px rgb(0, 18, 41, 0.10);
     width: 50%;
+    border-radius: 15px;
     text-align: left;
-    border: 1px solid wheat;
+    border: 4px solid white;
+}
+.quiz .questions h6{
+    color: black;
 }
 .quiz .questionnumber {
-    position: absolute;
     text-align: center;
-    background: #8080805d;
     top: -25px;
-    left: -1px;
-    width: 100px;
-    border: 1px solid wheat;
-    border-bottom-width: 0;
+    left: 10px;
+    width: 5%;
+}
+.quiz #seconds-counter {
+    text-align: center;
+    top: -25px;
+    right: 10px;
 }
 .quiz .answers {
     list-style-type: none;
+    background: #d3d3d3c4;
+    display: flex;
+}
+.quiz .option {
+    width: 90%;
 }
 .quiz .answers ul {
     margin: 0;
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
     padding-left: 30px;
 }
 .quiz .answers .selectedOption {
     margin: 0;
     cursor: pointer;
-    background: rgba(255, 228, 196, 0.342);
-    padding: 10px;
-    padding-left: 30px;
-}
-.quiz .answers ul:last-child {
-    margin-bottom: 8px;
+    background: #171f294f;
 }
 .quiz .answers ul:hover {
-    background: rgba(255, 228, 196, 0.342);
+    background: #171f294f;
 }
 .quiz .navigator {
     display: flex;
     justify-content: space-between;
     color: white;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.11), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
     text-align: left;
-    border: 1px solid wheat;
+    border: 1px solid white;
     border-top-width: 1px; 
     border-left-width: 0;
     border-right-width: 0;
@@ -74,63 +83,65 @@
     width: 15%;
     text-align: center;
     padding: 8px;
-    border: 1px solid wheat;
-    background: rgba(255, 255, 255, 0);
+    border-radius: 0 0 0 15px;
+    background: #205f836e;
     border-top-width: 0; 
     border-left-width: 0;
     border-bottom-width: 0;  
 }
 .quiz .backward:hover {
-    background: #2d3b4b8f;
+    background: #2d3b4b4d;
 }
 .quiz .backward::before {
     content: "<< ";
+    color: black;
 }
 .quiz .forward {
     width: 15%;
     text-align: center;
     padding: 8px;
-    border: 1px solid wheat;
-    background: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    border-radius: 0 0 15px 0;
+    background: #de574ebf;
     border-top-width: 0; 
     border-right-width: 0;
     border-bottom-width: 0;  
 }
 .quiz .forward:hover {
-    background: #2d3b4b8f;
+    background: #2d3b4b4d;
 }
 .quiz .forward::after {
     content: " >>";
+    color: black;
 }
-.quiz .fastchange {
+.quiz .answers .fastchange {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     align-content: flex-start;
     position: relative;
     padding: 4px;
-    width: 12%;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.11), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
-    border: 1px solid wheat;
-    border-left-width: 0;
+    width: 30%;
 }
-.quiz .change {
+.quiz .answers .fastchange .change {
     text-align: center;
     flex: 20%;
     font-size: 12px;
     padding: 5px;
+    color: black;
+    cursor: pointer;
+    border-radius: 8px;
     margin: 2px;
-    border: 1px solid wheat;
 }
 .quiz .currentchange {
-    background: rgba(255, 228, 196, 0.342);
+    background: #de574ebf;
 }
 .quiz .change:hover {
     text-decoration: underline;
 }
 .quiz .exit {
     position: absolute;
-    color: white;
+    color: black;
     cursor: default;
     right: 0;
     bottom: 0;
@@ -138,4 +149,109 @@
 .quiz .exit .door {
     width: 48px;
     height: 36px;
+    cursor: pointer;
+    color: #de574ebf;
+}
+.quiz .results {
+    height: 325px;
+    display: none;
+    color: white;
+    background: #8080808a;
+    position: relative;
+    cursor: default;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.11), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
+    width: 20%;
+    text-align: left;
+    border: 4px solid white;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.quiz .results .line {
+    background: white;
+    height: 5px;
+}
+.quiz .results .result {
+    padding: 15px 0 15px 0;
+}
+.quiz .results ul {
+    padding-left: 7%;
+}
+.quiz .results li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+.quiz .results .door {
+    position: absolute;
+    right: 2px;
+    bottom: 5px;
+    width: 48px;
+    height: 36px;
+    cursor: pointer;
+}
+.bckgrnd1 {
+    background: #e49a976b;
+}
+.bckgrnd2 {
+    background: #205f8349;
+}
+.bckgrnd3 {
+    background: #196d2750;
+}
+.bckgrnd4 {
+    background: #b36f1d8a;
+}
+.bckgrnd5 {
+    background: #7068b99a;
+}
+
+.quiz .background1 {
+    background: #de574ebf;
+}
+.quiz .background2 {
+    background: #205f8349;
+}
+.quiz .background3 {
+    background: #196d2750;
+}
+.quiz .background4 {
+    background: #9b6a2e77;
+}
+.quiz .background5 {
+    background: #160b7c75;
+}
+.quiz .exit .background1 {
+    background: none;
+    color: #de574ebf;
+}
+.quiz .exit .background2 {
+    background: none;
+    color: #205f8349;
+}
+.quiz .exit .background3 {
+    background: none;
+    color: #196d2750;
+}
+.quiz .exit .background4 {
+    background: none;
+    color: #865c2d79;
+}
+.quiz .exit .background5 {
+    background: none;
+    color: #160b7c73;
+}
+.quiz .answers .fastchange .change1{
+    border: 1px solid #de574ebf;
+}
+.quiz .answers .fastchange .change2{
+    border: 1px solid #205f8349;
+}
+.quiz .answers .fastchange .change3{
+    border: 1px solid #196d2750;
+}
+.quiz .answers .fastchange .change4{
+    border: 1px solid #68492249;
+}
+.quiz .answers .fastchange .change5{
+    border: 1px solid #160b7c75;
 }

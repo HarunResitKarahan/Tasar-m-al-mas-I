@@ -1,92 +1,136 @@
 .profileview {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-image: url("C:/Users/Harun/Desktop/Tasarım çalışması/tasarimcalismasi/src/assets/solid.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: flex-start;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    line-height: 26.4px;
 }
-.profile .profileimage {
-    border: 2px solid white;
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.493);
-}
-.profileview .profilecontent {
-    display: block;
-    width: 66%;
-    height: 100%;
-    padding-top: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
+.profileview .leftmenu{
     padding-bottom: 25px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    justify-content: left;
-    color: wheat;
-    border: 1px solid wheat;
-}
-.profileview .profileinfo {
-    text-align: left;
-    list-style-type: none;
-    padding: 30px;
-    background: rgba(5, 5, 5, 0.329);
-    box-shadow: 0 -8px 16px 0 rgba(0, 0, 0, 0.493), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
-    border: 2px solid wheat;
-}
-.profileview .profileinfo li {
+    padding: 5px;
+    background: #171F29;
     display: flex;
-    align-items: center;
-}
-.profileview .profileinfo ul {
-    display: inline-block;
-    padding: 0;
     height: 100%;
+    width: 4%;
+    top: 0;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
-.profileview .profilesolvedtests {
-    padding: 15px;
-    border: 1px solid wheat;
-    height: 750px;
-    background: rgba(5, 5, 5, 0.329);
-    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.493), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
-}
-.profileview li.favoritetests {
+.profileview .content {
     display: flex;
-    justify-content: flex-start;
-    padding: 15px;
-    padding-left: 45px;
+    flex-direction: column;
+    background: #d3d3d3c4;
+    padding-bottom: 60px;
     width: 100%;
 }
-.profileview ul.favorite {
+.profileview .content .head {
+    background: #FFF;
+    box-shadow: 0 0.5px 3px 0.5px rgb(0, 18, 41, 0.10);
+    display: flex;
+    justify-content: center;
+}
+.profileview .content .userinfo {
+    width: 73%;
+    line-height: 2rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.profileview .content .middle {
+    width: 73%;
+    line-height: 2rem;
+    margin: auto;
+}
+.profileview .leftmenu .user {
+    text-align: center;
+    cursor: pointer;
+}
+.profileview .leftmenu .userp{
+    color: rgb(153, 153, 157);
+    font-size: 11px;
+}
+.profileview .leftmenu .user:hover > .userp{
+    color: white;
+}
+.profileview .leftmenu .user:hover > .icon{
+    color: white;
+}
+.profileview .leftmenu .icon {
+    color: rgb(153, 153, 153);
+    width: 20px;
+    height: 45px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.profileview .leftmenu .icon:last-child {
+    margin: 0;
+}
+.profileview .leftmenu .icon:hover {
+    color: white;
+}
+.profileview .middle {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+ .profileview .middle .slick-slider .slick-list {
+    padding: 0;
+    padding-left: 5px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.profileview .middle .slick-slider .slick-list .slick-slide {
+    margin-right: 12px;
+}
+.profileview .middle .slick-slider .slick-list .slick-slide:nth-child(0) {
+    margin-right: 16px;
+}
+.profileview li.favorite {
     display: inline-block;
     list-style-type: none;
     margin: 2px;
-    text-align: left;
     padding: 0px;
-    margin-right: 25px;
-    background: rgba(255, 255, 255, 0.295);
-    border: 2px solid rgba(255, 255, 255, 0.349);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.11), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
+    background: white;
+    border: 2px solid white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.144), 0 8px 16px 0 rgba(0, 0, 0, 0.11);
     border-radius: 15px;
     transition: all 0.5s;
 }
-.profileview ul.favorite:hover {
+.profileview li.favorite .p-0 {
+    color: black;
+}
+.profileview .favorite li {
+    margin-left: 15px;
+}
+.profileview .favorite a {
+    text-decoration: none;
+    font-size: 16px;
+    width: 16.6%;
+}
+.profileview li.favorite:hover {
     transform: scale(1.07);
 }
-.profileview ul.favorite h5 {
+.profileview li.favorite h5 {
     color: white;
     padding: 8px;
-    font-size: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.452);
+    border: 2px solid white;
     text-align: center;
-    background: #2ab1ff7c;
+    background: #18303d;
     border-radius: 12px 12px  0 0;
 }
-.profileview ul.favorite li {
-    padding: 6px;
+.profileview li.favorite .bckground1 {
+    background: #b82419;
+}
+.profileview li.favorite .bckground2 {
+    background: #2ab1ff;
+}
+.profileview li.favorite .bckground3 {
+    background: #1bb935d2;
+}
+.profileview li.favorite .bckground4 {
+    background: #66471f;
+}
+.profileview li.favorite .bckground5 {
+    background: #2b1bb9d2;
+}
+.profileview li.favorite ul {
+    padding: 3% 8px;
 }

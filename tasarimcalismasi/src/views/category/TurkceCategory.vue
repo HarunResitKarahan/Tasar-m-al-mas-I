@@ -1,39 +1,26 @@
 <template>
-  <div class="home">
-    <!-- Componentlar home ekranında gösterildi -->
-    <Register />
-    <div class="bckgrndimage">
-      <Navbar />
-      <BigScreen />
+    <div class="turkcecategory">
+        <CategoryNavbar />
+        <CategoryMenu :tests="tests" :category="category" :shuffle="shuffle" :suggestion="suggestion"/>
+        <Footer />
     </div>
-    <!-- Databaseden çekilen veriler MiddleField componentına gönderildi -->
-    <MiddleField :tests="sirala" :lastaddedtests="lastadded" :shuffle="shuffle" :suggestion="suggestion"/>
-    <Footer />
-  </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// Componentlar import edildi
-import Register from '@/components/Register.vue'
-import Navbar from '@/components/Navbar.vue'
-import BigScreen from '@/components/BigScreen.vue'
-import MiddleField from '@/components/MiddleField.vue'
+import CategoryMenu from '@/components/CategoryMenu.vue'
+import CategoryNavbar from '@/components/CategoryNavbar.vue'
 import Footer from '@/components/Footer.vue'
-
 export default {
-  name: 'Home',
-  // Home.vue 'un kapsadığı componentlar belirtildi.
+  name: 'TurkceCategory',
   components: {
-    Register,
-    Navbar,
-    BigScreen,
-    MiddleField,
+    CategoryMenu,
+    CategoryNavbar,
     Footer
   },
   data () {
     return {
       tests: [],
+      category: String,
       index: 1,
       sirala: [],
       lastadded: [],
@@ -41,11 +28,18 @@ export default {
       suggestion: []
     }
   },
-  // Serverdan Anasayfa için veriler çekildi
   created () {
     if (localStorage.path) {
       localStorage.removeItem('path')
     }
+    fetch('http://localhost:8081/turkce', {
+      method: 'get'
+    })
+      .then((response) => response.json())
+      .then(data => {
+        this.tests = data
+        this.category = data[0].categoryNo
+      })
     fetch('http://localhost:8081/', {
       method: 'get'
     })

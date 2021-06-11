@@ -1,16 +1,65 @@
 .bigscreen {
     padding: 0;
     margin: 0;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.253);
 }
 .bigscreen .bv-example-row {
     justify-content: center;
-    padding: 9.7% 28% 9.7% 28%;
+    padding: 4.7% 28% 4.7%;
+}
+.bigscreen li {
+    text-align: center;
+    list-style-type: none;
+}
+.bigscreen ul {
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+}
+.bigscreen .miniheader {
+    font-size: 16px;
+    margin-right: 25px;
+    position: relative;
 }
 .bigscreen .bv-example-row .bigtext{
     cursor: default;
-    font-size: 42px;
+    font-size: 40px;
 }
 .bigscreen .bv-example-row .minitext{
     cursor: default;
     font-size: 15px;
 }
+.bigscreen .underline {
+    width: 0;
+    left: 50%;
+    height: 3px; 
+    position: absolute;
+    bottom: 0;
+    background: #ff4545;
+}
+
+@media screen and (max-width: 1577px) {
+    .bigscreen .bv-example-row .bigtext{
+        font-size: 35px;
+    }
+  }
+@media screen and (max-width: 1382px) {
+    .bigscreen .bv-example-row .bigtext{
+        font-size: 30px;
+    }
+  }
+@media screen and (max-width: 1187px) {
+    .bigscreen .bv-example-row .bigtext{
+        font-size: 25px;
+    }
+  }
+@media screen and (max-width: 992px) {
+    .bigscreen .bv-example-row .bigtext{
+        font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 797px) {
+    .bigscreen .bv-example-row .bigtext{
+        font-size: 15px;
+    }
+  } 

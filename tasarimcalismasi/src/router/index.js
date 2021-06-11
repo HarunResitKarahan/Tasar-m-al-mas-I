@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Profile from '../views/Profile.vue'
+import SosyalBilimlerCategory from '../views/category/SosyalBilimlerCategory.vue'
 
 Vue.use(VueRouter)
 
@@ -14,15 +15,38 @@ const routes = [
   {
     path: '/tests',
     name: 'Tests',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Tests.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/tests/Tests.vue'),
+    props: true
   },
   {
     path: '/profile',
     name: 'Profile',
     component: Profile
+  },
+  {
+    path: '/sosyalbilimlercategory',
+    name: 'SosyalBilimlerCategory',
+    component: SosyalBilimlerCategory
+  },
+  {
+    path: '/matematikcategory',
+    name: 'MatematikCategory',
+    component: () => import(/* webpackChunkName: "about" */ '../views/category/MatematikCategory.vue')
+  },
+  {
+    path: '/fencategory',
+    name: 'FenCategory',
+    component: () => import(/* webpackChunkName: "about" */ '../views/category/FenCategory.vue')
+  },
+  {
+    path: '/turkcecategory',
+    name: 'TurkceCategory',
+    component: () => import(/* webpackChunkName: "about" */ '../views/category/TurkceCategory.vue')
+  },
+  {
+    path: '/yabancidil',
+    name: 'YabanciDilCategory',
+    component: () => import(/* webpackChunkName: "about" */ '../views/category/YabanciDilCategory.vue')
   }
 ]
 
